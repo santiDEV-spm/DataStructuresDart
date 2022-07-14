@@ -50,6 +50,14 @@ class LinkedList<E>{
     return node.next!;
   }
 
+  E? pop(){
+    final value = head?.value;
+    head = head?.next;
+    if(this.isEmpty) tail = null;
+
+    return value;
+  }
+
   @override
   String toString() {
     if(isEmpty) return 'Empty list';

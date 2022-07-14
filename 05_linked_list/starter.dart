@@ -13,9 +13,14 @@ main(){
   list.push(3);
   list.push(2);
   list.push(1);
-  list.append(1);
-  list.append(2);
-  list.append(3);
+  list.push(0);
+
+  var middleNode = list.nodeAt(1)!;
+  list.insertAfter(middleNode, 22);
+
+  double tasa = 0.16;
+
+  print(tasa.toStringAsPrecision(6));
   print(list);
 
 }
