@@ -18,9 +18,6 @@ main(){
   var middleNode = list.nodeAt(1)!;
   list.insertAfter(middleNode, 22);
 
-  double tasa = 0.16;
-
-  print(tasa.toStringAsPrecision(6));
   print(list);
 
 }
