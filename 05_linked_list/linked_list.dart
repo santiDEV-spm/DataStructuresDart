@@ -58,6 +58,28 @@ class LinkedList<E>{
     return value;
   }
 
+  E? removeLast(){
+    if(head?.next == null) return pop();
+
+    var current = head;
+    while(current!.next != tail){
+      current = current.next;
+    }
+    final value = tail?.value;
+    tail = current;
+    tail?.next = null;
+    return value;
+  }
+
+  E? removeAfter(Node<E> node){
+    final value = node.next?.value;
+    if(node.next == tail){
+      tail = node;
+    }
+    node.next = node.next?.next;
+    return value;
+  }
+
   @override
   String toString() {
     if(isEmpty) return 'Empty list';

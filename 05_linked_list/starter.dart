@@ -18,6 +18,24 @@ main(){
   var middleNode = list.nodeAt(1)!;
   list.insertAfter(middleNode, 22);
 
-  print(list);
+  print('Before: $list');
+  final poppedValue = list.pop();
+  print('Popped Value: $poppedValue');
+  print('After: $list');
+
+  print('--------------------------------------------');
+
+  print('Before: $list');
+  final removedValue = list.removeLast();
+  print('remove Last: $removedValue');
+  print('After: $list');
+
+  print('--------------------------------------------');
+
+  print('Before: $list');
+  final firstNode = list.nodeAt(0);
+  final removedValueAfter = list.removeAfter(firstNode!);
+  print('remove Last: $removedValueAfter');
+  print('After: $list');
 
 }
